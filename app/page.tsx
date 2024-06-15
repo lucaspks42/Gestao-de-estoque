@@ -1,3 +1,6 @@
+import Link from "next/link";
+
+
 export default function Home() {
   return (
     <main>
@@ -5,15 +8,18 @@ export default function Home() {
         dashboard
       </h1>
       <div className="flex flex-row gap-5">
-        <button className="mx-4 my-2 bg-slate-500">
+        <Link href={"/entrada"} className="mx-4 my-2 bg-slate-500">
           Entrada de estoque
-        </button>
-        <button className="mx-4 my-2 bg-slate-500">
+        </Link >
+        <Link href={"/saida"} className="mx-4 my-2 bg-slate-500">
           Saída de estoque
-        </button>
-        <button className="mx-4 my-2 bg-slate-500">
+        </Link >
+        <input type="checkbox" id="incluir" />
+        <label htmlFor="incluir">incluir estado atual do estoque</label>
+
+        <Link href={"/exportar"} className="mx-4 my-2 bg-slate-500">
           Exportar dados
-        </button>
+        </Link >
       </div>
     </main>
   );
